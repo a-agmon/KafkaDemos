@@ -1,0 +1,12 @@
+Empty a topic by resetting purge policy to 1 sec
+
+./kafka-configs.sh  --bootstrap-server "127.0.0.1:9092" --alter --add-config retention.ms=1000 --topic "proto-test-topic-sessions"
+
+and after a few seconds
+
+./kafka-configs.sh --bootstrap-server "127.0.0.1:9092" --alter  --delete-config retention.ms --topic "proto-test-topic-sessions"
+
+
+ /Users/aagmon/Downloads/kafka_2.13-3.1.0/bin/kafka-streams-application-reset.sh --application-id "kafka-demo-2" --bootstrap-servers "127.0.0.1:9092" --input-topics "session-events"
+
+

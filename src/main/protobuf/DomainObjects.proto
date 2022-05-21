@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.aagmon.demos;
+
+message Session {
+  optional string id = 1;
+  optional int64 startTime = 2;
+  optional int64 endTime = 3;
+}
+
+
